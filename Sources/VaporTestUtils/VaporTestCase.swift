@@ -31,7 +31,7 @@ open class VaporTestCase: BaseTestCase{
 	}
 	open var defaultRequestHeaders: [String : String] = [:]
 
-	open static var persistApplicationBetweenTests: Bool = false
+	public static var persistApplicationBetweenTests: Bool = false
 	public static var persistedApplication: Application!
 
 	private var _persistApplicationBetweenTests: Bool {
