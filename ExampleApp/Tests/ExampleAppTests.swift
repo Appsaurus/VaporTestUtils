@@ -4,7 +4,10 @@ import XCTVapor
 import VaporTestUtils
 
 final class ExampleAppTests: VaporTestCase {
-
+    
+    override var validInvocationPlatforms: [TestInvocationPlatform] {
+        return [.macOS]
+    }
 	override var configurer: AppConfigurer{
 		return ExampleApp.configure
 	}

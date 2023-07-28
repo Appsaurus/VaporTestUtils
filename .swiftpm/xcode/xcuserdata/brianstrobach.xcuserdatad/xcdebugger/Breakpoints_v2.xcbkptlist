@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "12B98E0B-115E-44BB-9CA7-3F3362B2CE5C"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "97F0ACE9-9E23-4296-AD80-C46D4F6E687E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sources/VaporTestUtils/VaporTestCase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "skipUnlessPlatformEquals(equalsAny:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "97F0ACE9-9E23-4296-AD80-C46D4F6E687E - 3b22707a01c167fa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__C.XCTestCase.skipIfEnvironment(equalsAny: Vapor.Environment...) throws -&gt; ()"
+                  moduleName = "ExampleAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianstrobach/Local/Development/Swift/Packages/Vapor/VaporTestUtils/Sources/VaporTestUtils/VaporTestCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "144"
+                  endingLineNumber = "144"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "97F0ACE9-9E23-4296-AD80-C46D4F6E687E - d2d07dc9ca7dfa00"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__C.XCTestCase.skipUnlessPlatformEquals(equalsAny: Swift.Array&lt;VaporTestUtils.TestInvocationPlatform&gt;) throws -&gt; ()"
+                  moduleName = "ExampleAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brianstrobach/Local/Development/Swift/Packages/Vapor/VaporTestUtils/Sources/VaporTestUtils/VaporTestCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "142"
+                  endingLineNumber = "142"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
