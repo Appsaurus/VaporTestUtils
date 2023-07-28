@@ -58,7 +58,7 @@ open class VaporTestCase: XCTestCase {
         return cases
     }
     
-    func skipInvalidEnvironments() throws {
+    public func skipInvalidEnvironments() throws {
         try skipUnlessPlatformEquals(equalsAny: validInvocationPlatforms)
         try skipUnlessEnvironmentEquals(equalsAny: validInvocationEnvironments)
         if skipInvocationInReleaseMode { try skipIfReleaseEnvironment() }
@@ -105,14 +105,14 @@ open class VaporTestCase: XCTestCase {
 public enum LoggingLevel{
     case none, requests, responses, debug
 }
-extension VaporTestCase{
-	open func log(_ message: @autoclosure () -> Any, _ file: String = #file, _ function: String = #function, line: Int = #line){
+public extension VaporTestCase{
+	func log(_ message: @autoclosure () -> Any, _ file: String = #file, _ function: String = #function, line: Int = #line){
 		guard loggingLevel != .none else { return }
 		let fileName = file.split(separator: "/").last!
 		print("\n⏱ \(Date()) 👉 \(fileName).\(function) line \(line) 👇\n\n\(String(describing: message()))\n\n")
 	}
 
-	open func log(response: Response){
+	func log(response: Response){
 		switch loggingLevel {
 		case .debug, .responses:
             log("RESPONSE:\n\(response)")
@@ -124,7 +124,7 @@ extension VaporTestCase{
 
 
 
-extension XCTestCase {
+public extension XCTestCase {
     
     func skipIfPlatform(equalsAny environments: TestInvocationPlatform...) throws {
         try XCTSkipIf(TestInvocationPlatform.current.equalToAny(of: environments))
@@ -169,7 +169,7 @@ public extension VaporTestCase {
     }
 }
 
-extension VaporTestCase {
+public extension VaporTestCase {
     var environment: Environment {
         return try! Environment.detect()
     }
