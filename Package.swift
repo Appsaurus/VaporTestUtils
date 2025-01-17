@@ -24,8 +24,7 @@ let package = Package(
         .target(
             name: "VaporTestUtils",
             dependencies: [.product(name: "SwiftTestUtils", package: "SwiftTestUtils"),
-                           .product(name: "Vapor", package: "vapor"),
-                           .product(name: "XCTVapor", package: "vapor"),]),
+                           .product(name: "Vapor", package: "vapor")]),
         .testTarget(
             name: "VaporTestUtilsTests",
             dependencies: ["VaporTestUtils"]),
