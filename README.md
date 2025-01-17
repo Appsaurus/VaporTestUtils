@@ -27,7 +27,7 @@ Check the app included in this project for a complete example. Here are some of 
 **1. Import the library**
 
 ```swift
-import VaporTestUtils
+import XCTVaporExtensions
 ```
 
 **2. Setup your test case**

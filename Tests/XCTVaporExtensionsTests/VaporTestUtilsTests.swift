@@ -1,5 +1,5 @@
 import XCTest
-@testable import VaporTestUtils
+@testable import XCTVaporExtensions
 
 final class VaporTestUtilsTests: XCTestCase {
     

@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "VaporTestUtils",
+    name: "XCTVaporExtensions",
     platforms: [
         .macOS(.v12),
         .iOS(.v13),
@@ -13,8 +13,8 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "VaporTestUtils",
-            targets: ["VaporTestUtils"]),
+            name: "XCTVaporExtensions",
+            targets: ["XCTVaporExtensions"]),
     ],
     dependencies: [
         .package(url: "https://github.com/Appsaurus/SwiftTestUtils", from: "1.0.0"),
@@ -22,19 +22,20 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "VaporTestUtils",
+            name: "XCTVaporExtensions",
             dependencies: [.product(name: "SwiftTestUtils", package: "SwiftTestUtils"),
-                           .product(name: "Vapor", package: "vapor")]),
+                           .product(name: "Vapor", package: "vapor"),
+                           .product(name: "XCTVapor", package: "vapor")]),
         .testTarget(
-            name: "VaporTestUtilsTests",
-            dependencies: ["VaporTestUtils"]),
+            name: "XCTVaporExtensionsTests",
+            dependencies: ["XCTVaporExtensions"]),
         .target(name: "ExampleApp",  dependencies: [
             .product(name: "Vapor", package: "vapor")
         ],path: "./ExampleApp/App"),
 
         .testTarget(name: "ExampleAppTests", dependencies: [
             .target(name: "ExampleApp"),
-            .target(name: "VaporTestUtils"),
+            .target(name: "XCTVaporExtensions"),
             .product(name: "XCTVapor", package: "vapor")
 
         ], path: "./ExampleApp/Tests")
